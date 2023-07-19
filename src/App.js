@@ -4,7 +4,6 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 
-// import { Dashboard }  from "./scenes/global/dashboard";
 // import { Team } from "./scenes/team";
 // import { Invoices } from "./scenes/invoices";
 // import { Contacts } from "./scenes/contacts";
@@ -16,6 +15,7 @@ import Sidebar from "./scenes/global/Sidebar";
 // import { Geography } from "./scenes/geography";
 // import { Calendar } from "./scenes/calendar";
 import { Route, Routes } from "react-router-dom";
+import Dashboard from "./scenes/dashboard";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -29,7 +29,7 @@ function App() {
             <Topbar />
             <Sidebar />
             <Routes>
-              {/* <Route path="/" element={<Dashboard />}></Route> */}
+              <Route path="/" element={<Dashboard />}></Route>
               {/* <Route path="/team" element={<Team />}></Route> */}
               {/* <Route path="/invoices" element={<Invoices />}></Route> */}
               {/* <Route path="/contact" element={<Contacts />}></Route> */}
