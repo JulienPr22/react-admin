@@ -6,12 +6,11 @@ import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettin
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import Header from "../../components/Header";
-import React from "react";
 
 const Team = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const colums = [
+  const columns = [
     { field: "id", headerName: "ID" },
     {
       field: "name",
@@ -37,7 +36,7 @@ const Team = () => {
       flex: 1,
     },
     {
-      field: "access",
+      field: "accessLevel",
       headerName: "Access Level",
       flex: 1,
       renderCell: ({ row: { access } }) => {
@@ -51,6 +50,8 @@ const Team = () => {
             backgroundColor={
               access === "admin"
                 ? colors.greenAccent[600]
+                : access === "manager"
+                ? colors.greenAccent[700]
                 : colors.greenAccent[700]
             }
             borderRadius="4px"
@@ -69,7 +70,7 @@ const Team = () => {
 
   return (
     <Box m="20px">
-      <Header title="TEAM" subtitle="Manage the team members"></Header>
+      <Header title="TEAM" subtitle="Managing the Team Members" />
       <Box
         m="40px 0 0 0"
         height="75vh"
@@ -77,11 +78,11 @@ const Team = () => {
           "& .MuiDataGrid-root": {
             border: "none",
           },
-          "& .muiDataGrid-cell": {
+          "& .MuiDataGrid-cell": {
             borderBottom: "none",
           },
           "& .name-column--cell": {
-            colors: colors.greenAccent[300],
+            color: colors.greenAccent[300],
           },
           "& .MuiDataGrid-columnHeaders": {
             backgroundColor: colors.blueAccent[700],
@@ -94,9 +95,12 @@ const Team = () => {
             borderTop: "none",
             backgroundColor: colors.blueAccent[700],
           },
+          "& .MuiCheckbox-root": {
+            color: `${colors.greenAccent[200]} !important`,
+          },
         }}
       >
-        <DataGrid rows={mockDataTeam} columns={colums}></DataGrid>
+        <DataGrid checkboxSelection rows={mockDataTeam} columns={columns} />
       </Box>
     </Box>
   );

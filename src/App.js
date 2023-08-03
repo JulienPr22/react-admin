@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import Dashboard from "./scenes/dashboard";
 import Team from "./scenes/team";
 import Contacts from "./scenes/contacts";
+import Invoices from "./scenes/invoices";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -24,7 +25,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Dashboard />}></Route>
               <Route path="/team" element={<Team />}></Route>
-              {/* <Route path="/invoices" element={<Invoices />}></Route> */}
+              <Route path="/invoices" element={<Invoices />}></Route>
               <Route path="/contacts" element={<Contacts />}></Route>
               {/* <Route path="/bar" element={<Bar />}></Route> */}
               {/* <Route path="/form" element={<Form />}></Route> */}
