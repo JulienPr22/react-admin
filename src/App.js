@@ -9,6 +9,7 @@ import Dashboard from "./scenes/dashboard";
 import Team from "./scenes/team";
 import Contacts from "./scenes/contacts";
 import Invoices from "./scenes/invoices";
+import Form from "./scenes/form";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -28,7 +29,7 @@ function App() {
               <Route path="/invoices" element={<Invoices />}></Route>
               <Route path="/contacts" element={<Contacts />}></Route>
               {/* <Route path="/bar" element={<Bar />}></Route> */}
-              {/* <Route path="/form" element={<Form />}></Route> */}
+              <Route path="/form" element={<Form />}></Route>
               {/* <Route path="/line" element={<Line />}></Route> */}
               {/* <Route path="/pie" element={<Pie />}></Route> */}
               {/* <Route path="/faq" element={<FAQ />}></Route> */}
