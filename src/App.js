@@ -1,10 +1,9 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
+import { Route, Routes } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
-import { Route, Routes } from "react-router-dom";
-
 import Dashboard from "./scenes/dashboard";
 import Team from "./scenes/team";
 import Contacts from "./scenes/contacts";
@@ -15,6 +14,7 @@ import FAQ from "./scenes/faq";
 import Bar from "./scenes/bar";
 import Pie from "./scenes/pie";
 import Line from "./scenes/line";
+import Geography from "./scenes/geography";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -38,8 +38,7 @@ function App() {
               <Route path="/line" element={<Line />}></Route>
               <Route path="/pie" element={<Pie />}></Route>
               <Route path="/faq" element={<FAQ />}></Route>
-
-              {/* <Route path="/geography" element={<Geography />}></Route> */}
+              <Route path="/geography" element={<Geography />}></Route>
               <Route path="/calendar" element={<Calendar />}></Route>
             </Routes>
           </main>
