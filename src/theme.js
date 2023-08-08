@@ -1,9 +1,9 @@
 import { createContext, useState, useMemo } from "react";
 import { createTheme } from "@mui/material/styles";
 
-// color design tokens
+// color design tokens export
 export const tokens = (mode) => ({
-  ...(createContext(mode === "dark")
+  ...(mode === "dark"
     ? {
         grey: {
           100: "#e0e0e0",
@@ -28,15 +28,15 @@ export const tokens = (mode) => ({
           900: "#040509",
         },
         greenAccent: {
-          100: "#dbf4fb",
-          200: "#b7eaf7",
-          300: "#94dff4",
-          400: "#70d5f0",
-          500: "#4ccaec",
-          600: "#3da2bd",
-          700: "#2e798e",
-          800: "#1e515e",
-          900: "#0f282f",
+          100: "#dbf5ee",
+          200: "#b7ebde",
+          300: "#94e2cd",
+          400: "#70d8bd",
+          500: "#4cceac",
+          600: "#3da58a",
+          700: "#2e7c67",
+          800: "#1e5245",
+          900: "#0f2922",
         },
         redAccent: {
           100: "#f8dcdb",
@@ -77,23 +77,23 @@ export const tokens = (mode) => ({
           100: "#040509",
           200: "#080b12",
           300: "#0c101b",
-          400: "#f2f0f0",
+          400: "#f2f0f0", // manually changed
           500: "#141b2d",
-          600: "#434957",
+          600: "#1F2A40",
           700: "#727681",
           800: "#a1a4ab",
           900: "#d0d1d5",
         },
         greenAccent: {
-          100: "#0f282f",
-          200: "#1e515e",
-          300: "#2e798e",
-          400: "#3da2bd",
-          500: "#4ccaec",
-          600: "#70d5f0",
-          700: "#94dff4",
-          800: "#b7eaf7",
-          900: "#dbf4fb",
+          100: "#0f2922",
+          200: "#1e5245",
+          300: "#2e7c67",
+          400: "#3da58a",
+          500: "#4cceac",
+          600: "#70d8bd",
+          700: "#94e2cd",
+          800: "#b7ebde",
+          900: "#dbf5ee",
         },
         redAccent: {
           100: "#2c100f",
@@ -120,8 +120,7 @@ export const tokens = (mode) => ({
       }),
 });
 
-// mui theme setting
-
+// mui theme settings
 export const themeSettings = (mode) => {
   const colors = tokens(mode);
   return {
